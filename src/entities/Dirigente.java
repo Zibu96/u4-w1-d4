@@ -1,8 +1,9 @@
 package entities;
 
 import enums.Dipartimento;
+import interfaces.CheckIn;
 
-public class Dirigente extends Dipendente {
+public class Dirigente extends Dipendente implements CheckIn {
     public Dirigente(int matricola, double stipendio, Dipartimento dipartimento) {
         super(matricola, stipendio, dipartimento);
     }
@@ -21,5 +22,10 @@ public class Dirigente extends Dipendente {
         } else if (giorniLavorati == 30) {
             return (this.stipendio * 8) * 30;
         } else return 0;
+    }
+
+    @Override
+    public void checkIn() {
+        System.out.println("sto iniziando la mia riunione di 4 ore");
     }
 }

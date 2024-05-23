@@ -46,6 +46,10 @@ public class Main {
         }
         Volontario volontario1 = new Volontario("gino", 32, "developer");
         CheckIn[] checkedIn = {dipendente1, dipendente6, volontario1};
+        for (int i = 0; i < checkedIn.length; i++) {
+            checkedIn[i].checkIn();
+
+        }
     }
 
 
